@@ -27,9 +27,11 @@ export default {
         "page-gradient":
           "linear-gradient(to right, #05041A, #110E2F, #110E2F, #03000B)",
         "hero-gradient": "linear-gradient(90deg, #0EB3E4 0%, #0E9CD2 100%)",
+        dashboard: "url('./assets/Dashboard.png')",
       },
       boxShadow: {
-        "3xl": "0px 20px 40px 0px rgba(13, 57, 120, 0.21",
+        "3xl": "0px 20px 40px 0px rgba(13, 57, 120, 0.21)",
+        "4xl": "10px 15px 30px 0px rgba(41, 41, 42, 0.50)",
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",
