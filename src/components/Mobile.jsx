@@ -1,6 +1,6 @@
 import React from "react";
 import Phone from "../assets/Phone.png";
-import Screen from "../assets/Screen.png";
+import PhoneScreen from "../assets/Screen.png";
 import Google from "../assets/Google Play Badge.png";
 import Apple from "../assets/App Store Badge.png";
 import { Link } from "react-router-dom";
@@ -8,8 +8,8 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Mobile = () => {
   return (
-    <section className="container px-4 pb-40 pt-20 mt-10">
-      <div className="relative flex flex-col items-center justify-center md:flex-row md:justify-between pt-14 pb-8  px-4 md:px-24 bg-white rounded-lg w-full">
+    <section className="container px-4 py-8 md:pb-40 md:pt-20 mt-10">
+      <div className="relative flex flex-col items-center justify-center md:flex-row md:justify-between pt-14 pb-8  px-4 md:pl-[10rem] bg-white rounded-lg w-full">
         <div className="flex flex-col items-center md:items-start w-full max-w-[31.75rem] space-y-4 px-4 md:px-0">
           <h2 className="text-[#2C84C7] font-manrope text-3xl md:text-4xl text-center md:text-left font-extrabold leading-[3.375rem]">
             Download Our Mobile App
@@ -40,8 +40,15 @@ const Mobile = () => {
           </div>
         </div>
 
-        <div className="hidden md:block absolute w-[20rem] h-[40rem] right-0 shadow-4xl">
+        <div className="hidden md:block absolute w-[20rem] h-[40rem] right-[11rem] shadow-4xl">
           <img src={Phone} alt="Image of i-phone" className=" w-full h-full" />
+        </div>
+        <div className="hidden md:block absolute w-[17.44188rem] h-[37.76744rem] right-[197px] shadow-4xl">
+          <img
+            src={PhoneScreen}
+            alt="Image of i-phone"
+            className=" w-full h-full rounded-[29px]"
+          />
         </div>
       </div>
     </section>
