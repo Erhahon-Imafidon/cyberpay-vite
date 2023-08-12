@@ -4,18 +4,18 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isFixed, setIsFixed] = useState(false);
+  const [isChanged, setIsChanged] = useState(false);
 
-  // const handleScroll = () => {
-  //   const scrollPosition = window.scrollY;
-  //   setIsFixed(scrollPosition >= 20);
-  // };
+  const handleChange = () => {
+    const scrollPosition = window.scrollY;
+    setIsChanged(scrollPosition >= 20);
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleChange);
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    return () => window.removeEventListener("scroll", handleChange);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -24,7 +24,13 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="bg-page-gradient sticky top-0 z-[1000]">
+    <header
+      className={`${
+        isChanged
+          ? "bg-page-gradient sticky top-0 z-[1000]"
+          : "sticky top-0 z-[1000]"
+      } transition ease-in duration-300`}
+    >
       <nav className={`container py-6 px-4`}>
         <div className="flex flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
@@ -58,7 +64,7 @@ const Header = () => {
                   to="/integration"
                   className={`block text-gray-500 md:text-white font-roboto-slab tracking-[-0.015rem] hover:opacity-50 transition duration-300 ease-in-out rounded p-2 md:py-2 md:px-4 md:bg-transparent ${
                     location.pathname === "/integration" &&
-                    "bg-[#110E2F] text-white"
+                    "bg-[#110E2F] text-white opacity-50"
                   }`}
                   aria-current="page"
                 >

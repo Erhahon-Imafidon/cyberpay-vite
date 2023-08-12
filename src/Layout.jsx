@@ -4,7 +4,7 @@ import Header from "./components/Header";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="bg-page-gradient">
       <Header />
       <Outlet />
     </div>
