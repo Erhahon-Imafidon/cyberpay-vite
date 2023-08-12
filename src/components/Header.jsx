@@ -21,6 +21,20 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  // const handleLogo = () => {
+  //   if (window.innerWidth < 768) {
+  //     toggleMobileMenu();
+  //   } else if (isOpen) {
+  //     toggleMobileMenu();
+  //   }
+  // };
+
+  const handleLogo = () => {
+    if (isOpen && window.innerWidth < 768) {
+      toggleMobileMenu();
+    }
+  };
+
   const location = useLocation();
 
   return (
@@ -33,7 +47,7 @@ const Header = () => {
     >
       <nav className={`container py-6 px-4`}>
         <div className="flex flex-wrap items-center justify-between mx-auto">
-          <Link onClick={toggleMobileMenu} to="/" className="flex items-center">
+          <Link onClick={handleLogo} to="/" className="flex items-center">
             <span className="self-center text-2xl font-normal font-roboto-slab md:text-[2.15081rem] whitespace-nowrap text-white">
               Cyberpay
             </span>
