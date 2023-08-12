@@ -33,7 +33,7 @@ const Header = () => {
     >
       <nav className={`container py-6 px-4`}>
         <div className="flex flex-wrap items-center justify-between mx-auto">
-          <Link to="/" className="flex items-center">
+          <Link onClick={toggleMobileMenu} to="/" className="flex items-center">
             <span className="self-center text-2xl font-normal font-roboto-slab md:text-[2.15081rem] whitespace-nowrap text-white">
               Cyberpay
             </span>
@@ -58,7 +58,10 @@ const Header = () => {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0 bg-white md:bg-transparent rounded-lg border border-gray-100 md:border-0">
+            <ul
+              onClick={toggleMobileMenu}
+              className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0 bg-white md:bg-transparent rounded-lg border border-gray-100 md:border-0"
+            >
               <li>
                 <NavLink
                   to="/integration"
