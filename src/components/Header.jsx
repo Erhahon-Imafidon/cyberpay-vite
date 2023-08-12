@@ -76,7 +76,7 @@ const Header = () => {
                   to="/documentation"
                   className={`block text-gray-500 md:text-white font-roboto-slab tracking-[-0.015rem] hover:opacity-50 transition duration-300 ease-in-out rounded p-2 md:py-2 md:px-4 md:bg-transparent ${
                     location.pathname === "/documentation" &&
-                    "bg-[#110E2F] text-white"
+                    "bg-[#110E2F] text-white opacity-50"
                   }`}
                   aria-current="page"
                 >
@@ -88,7 +88,7 @@ const Header = () => {
                   to="/pricing"
                   className={`block text-gray-500 md:text-white font-roboto-slab tracking-[-0.015rem] hover:opacity-50 transition duration-300 ease-in-out rounded p-2 md:py-2 md:px-4 md:bg-transparent ${
                     location.pathname === "/pricing" &&
-                    "bg-[#110E2F] text-white"
+                    "bg-[#110E2F] text-white opacity-50"
                   }`}
                   aria-current="page"
                 >
