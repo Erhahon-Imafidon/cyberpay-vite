@@ -116,8 +116,7 @@ const Header = () => {
                 <NavLink
                   to="/login"
                   className={`block text-gray-500 md:text-white font-manrope font-semibold text-base tracking-[-0.015rem] hover:opacity-50 transition duration-300 ease-in-out rounded p-2 md:py-2 md:px-4 md:bg-transparent ${
-                    location.pathname === "/pricing" &&
-                    "bg-[#110E2F] text-white"
+                    location.pathname === "/login" && "bg-[#110E2F] text-white"
                   }`}
                   aria-current="page"
                 >
@@ -128,8 +127,7 @@ const Header = () => {
                 <NavLink
                   to="/signup"
                   className={`block text-gray-500 md:text-white font-manrope font-semibold text-base tracking-[-0.015rem] rounded hover:opacity-50 transition duration-300 ease-in-out p-2 md:py-2 md:px-4 md:bg-transparent ${
-                    location.pathname === "/pricing" &&
-                    "bg-[#110E2F] text-white"
+                    location.pathname === "/signup" && "bg-[#110E2F] text-white"
                   }`}
                   aria-current="page"
                 >
